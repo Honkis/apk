@@ -1,0 +1,66 @@
+ex url:
+http://www.systembolaget.se/Sok-dryck/Dryck/?varuNr=100
+
+http://www.bootstrapcdn.com/?theme=7#bootswatch_tab
+
+
+<?php 
+    include_once('apkService.php');
+    $apk = new apkService;
+
+    // category, limit
+    $beers = $apk->get_articles('öl', 10);
+ ?>
+
+<artikel>
+    <nr>10001</nr>
+    <Artikelid>25053</Artikelid>
+    <Varnummer>N</Varnummer>
+    <Namn>Braastad XO</Namn>
+    <Namn2></Namn2>
+    <Prisinklmoms>442.000</Prisinklmoms>
+    <Volymiml>700</Volymiml>
+    <PrisPerLiter>631.43</PrisPerLiter>
+    <Saljstart>2000-08-07</Saljstart>
+    <Slutlev> </Slutlev>
+    <Varugrupp>Cognac</Varugrupp>
+    <Forpackning>Flaska</Forpackning>
+    <Forslutning>Naturkork</Forslutning>
+    <Ursprung>Cognac, Fine Champagne</Ursprung>
+    <Ursprunglandnamn>Frankrike</Ursprunglandnamn>
+    <Producent>Tiffon</Producent>
+    <Leverantor>Arcus Sweden AB</Leverantor>
+    <Argang></Argang>
+    <Provadargang></Provadargang>
+    <Alkoholhalt>40%</Alkoholhalt>
+    <Sortiment>FS</Sortiment>
+    <Ekologisk>0</Ekologisk>
+    <Koscher>0</Koscher>
+</artikel>
+
+
+namn, prisinklmoms, volymiml, artikelid, varnr, alkoholhalt, varugrupp, forpackning, apk
+
+SET FOREIGN_KEY_CHECKS = 0; 
+SELECT * from artiklar 
+where varugrupp rlike '%vin%'
+ ORDER BY apk DESC
+ LIMIT    10;
+
+
+SELECT * FROM artiklar where varugrupp LIKE '%vitt%' AND varugrupp LIKE '%vin%' order by apk limit 10;
+
+
+select * from artiklar where volym like 7500 and forpackning like '%burk%' order by apk limit 10;
+
+
+select * from artiklar where forpackning like '%box%' order by apk limit 10;
+
+
+SELECT LEFT(`varugrupp`, LOCATE(",", `varugrupp`)-1) FROM `artiklar` WHERE LOCATE(",", `varugrupp`)>0 GROUP BY LEFT(`varugrupp`, LOCATE(",", `varugrupp`)-1)
+
+
+
+SET FOREIGN_KEY_CHECKS = 0; 
+TRUNCATE apk.artiklar;
+SET FOREIGN_KEY_CHECKS = 1;

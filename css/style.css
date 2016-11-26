@@ -1,0 +1,115 @@
+.hero-spacer {
+    margin-top: 50px;
+    color: #ffffff!important;
+	
+	background-image:url('../image/jumbotron-bg.jpg');
+	background-size: cover;
+
+}
+
+.hero-spacer .apk-logo {
+	width: 300px;
+	margin: 0 auto;
+	display: block;
+}
+
+.thumbnail {
+	margin-bottom: 0!important;
+}
+
+.apk-nav-logo {
+	width: 110px;
+	margin-top: 5px;
+}
+
+.hero-spacer h1 {
+    color: #2196F3!important;
+}
+
+.hero-spacer p {
+	width: 210px;
+	line-height: 25px;
+}
+
+table #systemet-logo {
+	width: 30px;
+	margin-right: 10px!important;
+}
+
+table .product-link, table .product-link img {
+	display: inline-block!important;
+}
+
+.apk-text-value {
+	font-weight: 600;
+	color: rgb(33, 150, 243);
+}
+
+.apk-category-menu {
+	margin: 37px auto 10px auto;
+	background-color: rgb(240, 240, 240);
+	width: 200px;
+}
+
+#apk-toplist__loadmorebtn {
+	width: 100%;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+/* Headings and colors */
+h3 {
+	color: #2196F3;
+}
+
+
+/* Custom media queries */
+@media screen and (max-width: 768px) {
+	.hero-spacer h1 {
+		font-size: 2.6em!important;
+	}
+
+	.hero-spacer p {
+		width: auto;
+		text-align: center;
+	}
+
+	.hero-spacer .apk-logo {
+		padding-bottom: 10px;
+	}
+
+
+	.apk-table-group {
+		display: none;
+	}
+	.apk-table-packaging {
+		display: none;
+	}
+	table #systemet-logo {
+		display: none!important;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.apk-category-menu {
+		margin: 0 auto 10px 0;
+		background-color: rgb(240, 240, 240);
+		width: 100%;
+	}
+
+	.apk-data-body tr td {
+		padding: 2px!important;
+	}
+
+	.hero-spacer .apk-logo {
+		width: 200px;
+		padding-bottom: 10px;
+	}
+	
+	.hero-spacer p {
+		text-align: center;
+	}
+}
+
